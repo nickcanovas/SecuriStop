@@ -100,8 +100,8 @@ html,body{height:100%;margin:0;color:var(--ink);background:var(--bg);-webkit-fon
 
 
 /* features */
-.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;padding:2rem 0}
-.features article{background:#fbfbfb;padding:1rem;border-radius:8px}
+/* .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;padding:2rem 0}
+.features article{background:#fbfbfb;padding:1rem;border-radius:8px} */
 
 /* Strengths Section */
 .strengths-section {
