@@ -31,7 +31,7 @@ html,body{height:100%;margin:0;color:var(--ink);background:var(--bg);-webkit-fon
   position: relative;
   width: 100%;
   height: 80vh; /* 80% of the viewport height */
-  background: url('../images/banner.webp') no-repeat center center/cover;
+  background: url('../images/school-bus-stop-w-kids.jpg') no-repeat center center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
