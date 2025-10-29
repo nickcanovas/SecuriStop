@@ -21,10 +21,26 @@ html,body{height:100%;margin:0;color:var(--ink);background:var(--bg);-webkit-fon
 .nav-toggle{display:none;background:none;border:0;font-size:1.25rem}
 
 /* hero */
-.hero{padding:4rem 0;background:linear-gradient(180deg,rgba(14,165,164,0.08),transparent 60%)}
+/*.hero{padding:4rem 0;background:linear-gradient(180deg,rgba(14,165,164,0.08),transparent 60%)}
 .hero h1{font-size:2.25rem;margin:0 0 0.5rem}
 .hero .lead{color:var(--muted);margin-bottom:1rem}
-.btn{display:inline-block;background:var(--accent);color:#fff;padding:0.6rem 1rem;border-radius:8px;text-decoration:none}
+.btn{display:inline-block;background:var(--accent);color:#fff;padding:0.6rem 1rem;border-radius:8px;text-decoration:none} */
+.hero {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.hero-image {
+  width: 100%;
+  height: auto;
+}
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 
 /* features */
 .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;padding:2rem 0}
