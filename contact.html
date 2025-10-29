@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact · My Business</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">My Business</a>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container narrow">
+    <h1>Contact</h1>
+    <p>If you'd like a quick email: <a href="mailto:hello@yourdomain.com">hello@yourdomain.com</a></p>
+
+    <!-- Simple contact form using Formspree (recommended for static sites)
+         1) Sign up at https://formspree.io and get your form endpoint
+         2) Replace "https://formspree.io/f/your-id" with the endpoint they give you
+    -->
+    <!-- <form action="https://formspree.io/f/your-id" method="POST">
+      <label>
+        Your name
+        <input type="text" name="name" required>
+      </label>
+      <label>
+        Email
+        <input type="email" name="_replyto" required>
+      </label>
+      <label>
+        Message
+        <textarea name="message" rows="6" required></textarea>
+      </label>
+      <button type="submit" class="btn">Send</button>
+    </form> -->
+
+    <!-- Fallback: mailto link -->
+    <p>Or use the mailto link above to send us a message directly from your email client.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> My Business</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
