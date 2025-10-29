@@ -41,6 +41,13 @@ html,body{height:100%;margin:0;color:var(--ink);background:var(--bg);-webkit-fon
   transform: translate(-50%, -50%);
 }
 
+/* Logo */
+.logo img {
+  height: 50px;       /* adjust as needed */
+  width: auto;
+  vertical-align: middle;
+}
+
 
 /* features */
 .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;padding:2rem 0}
