@@ -115,7 +115,9 @@ html,body{height:100%;margin:0;color:var(--ink);background:var(--bg);-webkit-fon
 .dropdown-content {
   display: none;                /* hidden until hover or open */
   position: absolute;
-  top: calc(100% + 8px);       /* sits below the About button with a small gap */
+  /*top: calc(100% + 8px); */       /* sits below the About button with a small gap */
+  top: 100%;        /* touches bottom edge of button */
+  margin-top: 0;    /* removes extra space that causes hover loss */
   left: 0;
   min-width: 180px;
   background: #ffffff;
@@ -152,9 +154,23 @@ html,body{height:100%;margin:0;color:var(--ink);background:var(--bg);-webkit-fon
   transition: transform 0.25s ease;
 }
 
+/* dropdown to stay open even when the mouse hovers over padding edge*/
+.dropdown:hover .dropbtn {
+  background-color: rgba(0,0,0,0.03); /* subtle feedback */
+}
+
 /* rotate caret on hover */
 .dropdown:hover .dropbtn::after {
   transform: rotate(180deg);
+}
+
+/* Ensure all nav items share the same vertical alignment */
+.nav a,
+.dropbtn {
+  line-height: 1;            /* keeps text baselines consistent */
+  padding: 0.5rem 0.75rem;   /* make all buttons same height */
+  display: flex;
+  align-items: center;       /* vertically center text */
 }
 
 /* **************************** */
