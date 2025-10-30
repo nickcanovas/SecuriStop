@@ -278,3 +278,50 @@ html,body{height:100%;margin:0;color:var(--ink);background:var(--bg);-webkit-fon
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Tech Hero Section */
+.tech-hero {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: 3rem auto;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.tech-hero img {
+  width: 100%;
+  display: block;
+  transition: opacity 0.4s ease;
+  border-radius: 12px;
+}
+
+.tech-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.65);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  border-radius: 12px;
+}
+
+.tech-hero:hover img {
+  opacity: 0.4;
+}
+
+.tech-hero:hover .tech-hero-overlay {
+  opacity: 1;
+}
+
+.tech-hero-overlay h2 {
+  font-size: 1.5rem;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
