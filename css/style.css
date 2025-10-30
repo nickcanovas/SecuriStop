@@ -14,13 +14,14 @@ html,body{height:100%;margin:0;color:var(--ink);background:var(--bg);-webkit-fon
 .header-inner{display:flex;align-items:center;justify-content:space-between;padding:1rem 0}
 .brand{font-weight:700;text-decoration:none;color:var(--ink);font-size:1.125rem}
 
-/* nav */
-.nav{display:flex;gap:1rem}
+/* **************************** */
+/*        NAV / HEADER          */
+/* **************************** */
+/* .nav{display:flex;gap:1rem}
 .nav a{color:var(--ink);text-decoration:none;padding:0.25rem 0.5rem}
 .nav a:hover{color:var(--accent)}
 .nav-toggle{display:none;background:none;border:0;font-size:1.25rem}
 
-/* Dropdown Integration */
 .dropdown {
   position: relative;
 }
@@ -28,7 +29,7 @@ html,body{height:100%;margin:0;color:var(--ink);background:var(--bg);-webkit-fon
 .dropdown-content {
   display: none;
   position: absolute;
-  top: 100%; /* appears directly below About */
+  top: 100%;
   left: 0;
   background: #fff;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -54,12 +55,10 @@ html,body{height:100%;margin:0;color:var(--ink);background:var(--bg);-webkit-fon
   color: var(--accent);
 }
 
-/* Show dropdown on hover */
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
-/* Add small caret next to About */
 .dropbtn::after {
   content: "▾";
   font-size: 0.7rem;
@@ -67,7 +66,6 @@ html,body{height:100%;margin:0;color:var(--ink);background:var(--bg);-webkit-fon
   transition: transform 0.3s ease;
 }
 
-/* Rotate caret when hovering */
 .dropdown:hover .dropbtn::after {
   transform: rotate(180deg);
 }
@@ -82,6 +80,81 @@ html,body{height:100%;margin:0;color:var(--ink);background:var(--bg);-webkit-fon
   display: block;
   opacity: 1;
   transform: translateY(0);
+} */
+
+/* --- NAV DROPDOWN: reset + base --- */
+.nav {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* Make sure anchor styles still apply */
+.nav > a,
+.nav .dropbtn {
+  color: var(--ink);
+  text-decoration: none;
+  padding: 0.25rem 0.5rem;
+  display: inline-block;
+}
+
+/* Remove default list styles for dropdown menus */
+.dropdown-content,
+.dropdown-content li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Position the dropdown menu as an overlay */
+.dropdown {
+  position: relative; /* establishes positioning context */
+}
+
+/* Hidden by default, absolutely positioned overlay */
+.dropdown-content {
+  display: none;                /* hidden until hover or open */
+  position: absolute;
+  top: calc(100% + 8px);       /* sits below the About button with a small gap */
+  left: 0;
+  min-width: 180px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(10, 20, 30, 0.12);
+  z-index: 999;
+  padding: 0.25rem 0;
+}
+
+/* Submenu items */
+.dropdown-content a {
+  display: block;
+  padding: 0.6rem 1rem;
+  color: var(--ink);
+  text-decoration: none;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.dropdown-content a:hover {
+  background: #f5f7fa;
+  color: var(--accent);
+}
+
+/* Show on hover (desktop) */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* caret indicator on About */
+.dropbtn::after {
+  content: "▾";
+  margin-left: 0.35rem;
+  font-size: 0.85rem;
+  transition: transform 0.25s ease;
+}
+
+/* rotate caret on hover */
+.dropdown:hover .dropbtn::after {
+  transform: rotate(180deg);
 }
 
 /* **************************** */

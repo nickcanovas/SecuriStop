@@ -11,7 +11,8 @@
 </head>
 
 <body>
-  <header class="site-header">
+  <!-- HEADER BAR -->
+  <!-- <header class="site-header">
     <div class="container header-inner">
       <a class="logo" href="index.html">
         <img src="images/logo_transparent_color4.png" alt="SecuriStop Logo">
@@ -21,17 +22,28 @@
         ☰
       </button>
 
-      <!-- <nav id="primary-nav" class="nav">
+      <nav id="primary-nav" class="nav">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
-      </nav> -->
-      <nav class="nav">
+      </nav>
+    </div>
+  </header> -->
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="images/logo.png" alt="My Business Logo" style="height:40px;">
+      </a>
+
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+
+      <nav class="nav" aria-label="Main navigation">
         <a href="index.html">Home</a>
 
         <div class="dropdown">
-          <a href="about.html" class="dropbtn">About</a>
-          <ul class="dropdown-content">
+          <a href="about.html" class="dropbtn" aria-haspopup="true" aria-expanded="false">About</a>
+          <ul class="dropdown-content" aria-label="About sub-menu">
             <li><a href="Technology.html">Technology</a></li>
           </ul>
         </div>
