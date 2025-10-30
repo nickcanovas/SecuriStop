@@ -53,7 +53,7 @@ html,body{height:100%;margin:0;color:var(--ink);background:var(--bg);-webkit-fon
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 60%; /*80%*/
+  max-width: 40%; /*80%*/
   opacity: 0; /* start hidden */
   animation: fadeInUp 1.2s ease-out forwards;
   /* animation-delay: 0.3s; */
