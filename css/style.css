@@ -20,6 +20,70 @@ html,body{height:100%;margin:0;color:var(--ink);background:var(--bg);-webkit-fon
 .nav a:hover{color:var(--accent)}
 .nav-toggle{display:none;background:none;border:0;font-size:1.25rem}
 
+/* Dropdown Integration */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%; /* appears directly below About */
+  left: 0;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  min-width: 180px;
+  z-index: 999;
+  padding: 0.5rem 0;
+}
+
+.dropdown-content li {
+  list-style: none;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background: #f2f2f2;
+  color: var(--accent);
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Add small caret next to About */
+.dropbtn::after {
+  content: "▾";
+  font-size: 0.7rem;
+  margin-left: 0.25rem;
+  transition: transform 0.3s ease;
+}
+
+/* Rotate caret when hovering */
+.dropdown:hover .dropbtn::after {
+  transform: rotate(180deg);
+}
+
+.dropdown-content {
+  opacity: 0;
+  transform: translateY(-5px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* **************************** */
 /*          HOME PAGE           */
 /* **************************** */
