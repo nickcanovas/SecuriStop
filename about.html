@@ -42,7 +42,7 @@
     <h2>In a nutshell, SecuriStop is built to deliver on these key objectives:</h2>
 
     <ol class="styled-list">
-      <li><strong>Prevent Violations:</strong> Deploy intelligent detection systems to discourage and document illegal school bus passing.</li>
+      <li><strong>Prevent Violations:</strong> Deploy intelligent detection systems and signage to discourage and document illegal school bus passing.</li>
       <li><strong>Support Law Enforcement:</strong> Provide accurate, timely data to assist enforcement agencies in addressing violations effectively.</li>
       <li><strong>Enhance Community Safety:</strong> Increase driver accountability through technology that prioritizes child safety.</li>
       <li><strong>Promote Awareness:</strong> Drive long-term behavioral change by making safety visible and measurable.</li>
@@ -57,5 +57,20 @@
   </footer>
 
   <script src="js/script.js"></script>
+
+  <!-- Script for list animation -->
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('slide-in');
+        }
+      });
+    });
+
+    const listItems = document.querySelectorAll('.styled-list li');
+    listItems.forEach((item) => observer.observe(item));
+  </script>
+  
 </body>
 </html>
