@@ -170,7 +170,7 @@ html,body{height:100%;margin:0;color:var(--ink);background:var(--bg);-webkit-fon
   line-height: 1;            /* keeps text baselines consistent */
   padding: 0.5rem 0.75rem;   /* make all buttons same height */
   display: flex;
-  align-items: center;       /* vertically center text */
+  /* align-items: center;  */     /* vertically center text */
 }
 
 /* **************************** */
