@@ -3,24 +3,31 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Contact · My Business</title>
+  <meta name="description" content="SecuriStop Technology"/>
+  <title>Technology · SecuriStop</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="images/logo_favicon.png" sizes="32x32" />
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a class="logo" href="index.html">
-        <img src="images/logo_transparent.png" alt="SecuriStop Logo">
+      <a class="brand" href="index.html">
+        <img src="images/logo_transparent_color4.png" alt="My Business Logo" style="height:40px;">
       </a>
 
-      <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">
-        ☰
-      </button>
+      <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
 
-      <nav id="primary-nav" class="nav">
+      <nav class="nav" aria-label="Main navigation">
         <a href="index.html">Home</a>
-        <a href="about.html">About</a>
+
+        <div class="dropdown">
+          <a href="about.html" class="dropbtn" aria-haspopup="true" aria-expanded="false">About</a>
+          <ul class="dropdown-content" aria-label="About sub-menu">
+            <li><a href="technology.html">Technology</a></li>
+          </ul>
+        </div>
+
         <a href="contact.html">Contact</a>
       </nav>
     </div>
