@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Contact SecuriStop"/>
-  <title>Contact · SecuriStop</title>
+  <meta name="description" content="SecuriStop Technology"/>
+  <title>Technology · SecuriStop</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/team.css">
   <link rel="icon" href="images/logo_favicon.png" sizes="32x32" />
 </head>
 <body>
@@ -37,39 +37,43 @@
     </div>
   </header>
 
-  <main class="container narrow">
-    <h1>Contact</h1>
-    <p>If you'd like a quick email: <a href="mailto:hello@yourdomain.com">hello@yourdomain.com</a></p>
+  <!-- MAIN CONTENT BELOW -->
+  <header class="page-header">
+    <h1>Meet the Team</h1>
+  </header>
 
-    <!-- Simple contact form using Formspree (recommended for static sites)
-         1) Sign up at https://formspree.io and get your form endpoint
-         2) Replace "https://formspree.io/f/your-id" with the endpoint they give you
-    -->
-    <!-- <form action="https://formspree.io/f/your-id" method="POST">
-      <label>
-        Your name
-        <input type="text" name="name" required>
-      </label>
-      <label>
-        Email
-        <input type="email" name="_replyto" required>
-      </label>
-      <label>
-        Message
-        <textarea name="message" rows="6" required></textarea>
-      </label>
-      <button type="submit" class="btn">Send</button>
-    </form> -->
+  <section class="team-section">
+    <div class="team-member">
+      <img src="images/founder1.jpg" alt="Co-founder 1" class="headshot" />
+      <div class="bio">
+        <h2>Co-founder 1</h2>
+        <p>
+          Co-founder 1 is an engineer and entrepreneur with a background in
+          intelligent systems and product development. Passionate about
+          developing safety technologies that make a real impact.
+        </p>
+      </div>
+    </div>
 
-    <!-- Fallback: mailto link -->
-    <p>Or use the mailto link above to send us a message directly from your email client.</p>
-  </main>
+    <div class="team-member reverse">
+      <img src="images/founder2.jpg" alt="Co-founder 2" class="headshot" />
+      <div class="bio">
+        <h2>Co-founder 2</h2>
+        <p>
+          Co-founder 2 brings expertise in embedded systems and operations.
+          With years of experience in systems integration, they ensure SecuriStop
+          technologies are robust and scalable.
+        </p>
+      </div>
+    </div>
+  </section>
 
+  <!-- FOOTER BELOW -->
   <footer class="site-footer">
     <div class="container">
-      <p>&copy; <span id="year"></span> My Business</p>
+      <p>&copy; <span id="year"></span> SecuriStop · <a href="privacy.html">Privacy</a></p>
     </div>
   </footer>
-
+  
   <script src="js/script.js"></script>
 </body>
