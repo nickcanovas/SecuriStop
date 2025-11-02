@@ -86,8 +86,13 @@ html,body{height:100%;margin:0;color:var(--ink);background:var(--bg);-webkit-fon
 .nav {
   display: flex;
   gap: 1rem;
-  align-items: center;
+  /*align-items: center; */
 }
+
+.nav{display:flex;gap:1rem}
+.nav a{color:var(--ink);text-decoration:none;padding:0.25rem 0.5rem}
+.nav a:hover{color:var(--accent)}
+.nav-toggle{display:none;background:none;border:0;font-size:1.25rem}
 
 /* Make sure anchor styles still apply */
 .nav > a,
