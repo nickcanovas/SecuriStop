@@ -236,10 +236,6 @@ html,body{height:100%;margin:0;color:var(--ink);background:var(--bg);-webkit-fon
 /* **************************** */
 /*          TECH PAGE           */
 /* **************************** */
-.page-content {
-  padding-top: 80px; /* adjust depending on your nav height */
-}
-
 /* Namespace under .tech-page so styles only affect this page */
 .tech-page { font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial; }
 
