@@ -1,6 +1,6 @@
 /* Basic reset and variables */
 :root{
-  --bg:#ffffff;
+  --bg:#F5F7FA;
   --ink:#0b1220;
   --muted:#546E7A;
   --accent:#4A7C9F;
@@ -267,7 +267,7 @@ h1::after {
 .tech-intro {
   text-align: center;
   padding: 4rem 1rem 2rem;
-  background-color: #f8f9fa;
+  background-color: #F5F7FA;
 }
 
 .tech-intro h1 {
