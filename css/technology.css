@@ -128,127 +128,6 @@ h1::after {
   /* align-items: center;  */     /* vertically center text */
 }
 
-
-/* **************************** */
-/*         ABOUT PAGE           */
-/* **************************** */
-/* About Page Styling */
-.about-section {
-  max-width: 900px;
-  margin: 3rem auto;
-  padding: 0 1.5rem;
-  line-height: 1.7;
-}
-
-.about-section h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #222;
-}
-
-.about-section h2 {
-  font-size: 1.5rem;
-  margin: 2rem 0 1rem;
-  color: #1B3A5C;
-}
-
-/* Styled Numbered List */
-.styled-list {
-  counter-reset: list-counter;
-  list-style: none;
-  padding-left: 0;
-}
-
-.styled-list li {
-  position: relative;
-  counter-increment: list-counter;
-  background: #f7f9fb;
-  margin: 1rem 0;
-  padding: 1.5rem 1.5rem 1.5rem 3.5rem;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.styled-list li::before {
-  content: counter(list-counter);
-  position: absolute;
-  left: 1rem;
-  top: 50%;
-  transform: translateY(-50%);
-  background: #1B3A5C;
-  color: #fff;
-  font-weight: bold;
-  font-size: 1.1rem;
-  width: 2rem;
-  height: 2rem;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.styled-list li:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-/* Slide-in Animation */
-.styled-list li.slide-in {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Tech Hero Section */
-.tech-hero {
-  position: relative;
-  width: 100%;
-  max-width: 1000px;
-  margin: 3rem auto;
-  overflow: hidden;
-  border-radius: 12px;
-}
-
-.tech-hero img {
-  width: 100%;
-  display: block;
-  transition: opacity 0.4s ease;
-  border-radius: 12px;
-}
-
-.tech-hero-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.65);
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 0.4s ease;
-  border-radius: 12px;
-}
-
-.tech-hero:hover img {
-  opacity: 0.4;
-}
-
-.tech-hero:hover .tech-hero-overlay {
-  opacity: 1;
-}
-
-.tech-hero-overlay h2 {
-  font-size: 1.5rem;
-  text-align: center;
-  letter-spacing: 0.5px;
-}
-
 /* **************************** */
 /*          TECH PAGE           */
 /* **************************** */
@@ -291,8 +170,8 @@ h1::after {
 }
 
 
-/* Container helper if you use one in main stylesheet */
-.container { max-width: 1100px; margin: 0 auto; padding: 0 1rem; }
+/* Container helper if you use one in main stylesheet
+.container { max-width: 1100px; margin: 0 auto; padding: 0 1rem; } */
 
 /* Each step */
 .tech-step {
