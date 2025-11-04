@@ -17,6 +17,7 @@ html,body{height:100%;margin:0;color:var(--ink);background:var(--bg);-webkit-fon
 h1 {
   position: relative;
   display: inline-block; /* keeps the underline tight to the text */
+  color: #1B3A5C;
 }
 
 h1::after {
