@@ -283,7 +283,7 @@ h1::after {
   display: inline-block; /* keeps the underline tight to the text */
 }
 
-.purpose-content h2 {
+.purpose-content h2::after {
   content: "";
   display: block;
   width: 100%;
