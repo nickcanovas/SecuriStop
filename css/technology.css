@@ -39,7 +39,7 @@ h1::after {
   /*align-items: center; */
 }
 
-.nav{display:flex;gap:1rem;align-items: center}
+.nav{display:fixed;gap:1rem;align-items: center}
 .nav a{color:var(--ink);text-decoration:none;padding:0.25rem 0.5rem}
 .nav a:hover{color:var(--accent)}
 .nav-toggle{display:none;background:none;border:0;font-size:1.25rem}
