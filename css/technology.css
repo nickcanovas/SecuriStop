@@ -18,7 +18,7 @@ html,body{height:100%;margin:0;color:var(--ink);background:var(--bg);-webkit-fon
 /*        NAV / HEADER          */
 /* **************************** */
 .nav {
-  display: flex;
+  display: fixed;
   gap: 1rem;
   /*align-items: center; */
 }
@@ -238,6 +238,10 @@ html,body{height:100%;margin:0;color:var(--ink);background:var(--bg);-webkit-fon
 /* **************************** */
 /* Namespace under .tech-page so styles only affect this page */
 .tech-page { font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial; }
+
+main {
+  padding-top: 80px; /* match your header height */
+}
 
 /* Page header */
 .tech-header {
