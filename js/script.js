@@ -1,7 +1,7 @@
 // tiny script for mobile nav and simple helpers
 document.addEventListener('DOMContentLoaded', function () {
   const navToggle = document.getElementById('nav-toggle');
-  const nav = document.getElementById('primary-nav');
+  const nav = document.querySelector('.nav');
   const year = document.getElementById('year');
 
   if (year) year.textContent = new Date().getFullYear();

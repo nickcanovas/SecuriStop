@@ -45,13 +45,13 @@ h1::after {
 .nav {
   display: flex;
   gap: 1rem;
-  /*align-items: center; */
+  align-items: center;
 }
 
 .nav{display:flex;gap:1rem;align-items: center}
 .nav a{color:var(--ink);text-decoration:none;padding:0.25rem 0.5rem}
 .nav a:hover{color:var(--accent)}
-.nav-toggle{display:none;background:none;border:0;font-size:1.25rem}
+.nav-toggle{display:none;background:none;border:0;font-size:1.25rem; cursor:pointer;} /* cursor:pointer; new*/
 
 /* Make sure anchor styles still apply */
 .nav > a,
@@ -153,7 +153,7 @@ h1::after {
   align-items: center;
   justify-content: center;
   color: white;
-  text-align: center;
+  text-align: left;
   overflow: hidden;
 }
 
@@ -309,10 +309,14 @@ h1::after {
 @media (max-width:900px){
   .grid-3{grid-template-columns:repeat(2,1fr)}
 }
-@media (max-width:640px){
+@media (max-width:768px){
   .grid-3{grid-template-columns:1fr}
-  .nav{display:none}
+  .nav { display:none; position:absolute; top:64px; right:1rem; background:#fff; flex-direction:column; gap:0; padding:0.75rem; border-radius:10px; box-shadow:0 8px 30px rgba(0,0,0,0.12); z-index:60; width:220px; }
   .nav-toggle{display:inline-block}
+  .nav.show { display:flex; }
+  .nav a, .nav .dropbtn { display:block; padding:0.6rem 0.8rem; color:var(--ink); }
+  .dropdown-content { position:static; display:none; box-shadow:none; padding-left:0.6rem; background:transparent; }
+  .dropdown.open .dropdown-content { display:block; }
   .header-inner{gap:1rem}
 }
 
