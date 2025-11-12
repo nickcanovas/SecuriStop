@@ -6,10 +6,11 @@
   <meta name="description" content="Contact SecuriStop"/>
   <title>Contact · SecuriStop</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/contact.css">
   <link rel="icon" href="images/logo_favicon.png" sizes="32x32" />
 </head>
-<body>
+
+<body class="contact-page">
   <!-- HEADER BAR -->
   <header class="site-header">
     <div class="container header-inner">
@@ -37,9 +38,41 @@
     </div>
   </header>
 
+  <!-- HERO IMAGE -->
+  <section class="contact-hero">
+    <img src="images/contact_us.jpg" alt="Contact Us" />
+    <div class="contact-hero-overlay">
+      <h1>Contact Us</h1>
+    </div>
+  </section>
+
+  <!-- CONTACT CONTENT -->
+  <main class="container contact-content">
+    <p class="intro">
+      Our team would love to talk with you about any of your inquiries.  
+      We are always interested in discussing partnerships, technology collaborations, and opportunities to make transportation safer.
+    </p>
+
+    <div class="contact-info">
+      <p><strong>Email Us:</strong>  
+        <a href="mailto:hello@securistop.com">hello@securistop.com</a>
+      </p>
+      <p><strong>Call Us:</strong>  
+        <a href="tel:+1234567890">(123) 456-7890</a>
+      </p>
+    </div>
+
+    <p class="note">
+      We strive to respond to all inquiries within 1-2 business days.
+    </p>
+  </main>
+
+  <!--
   <main class="container narrow">
-    <h1>Contact</h1>
+    <h1>Contact Us</h1>
+    <p>Our team would love to talk with you about any of your inquires. We are interested in </p>
     <p>If you'd like a quick email: <a href="mailto:hello@yourdomain.com">hello@yourdomain.com</a></p>
+  -->
 
     <!-- Simple contact form using Formspree (recommended for static sites)
          1) Sign up at https://formspree.io and get your form endpoint
@@ -59,11 +92,10 @@
         <textarea name="message" rows="6" required></textarea>
       </label>
       <button type="submit" class="btn">Send</button>
-    </form> -->
+    </form>
+  </main> -->
 
-    <!-- Fallback: mailto link -->
-    <p>Or use the mailto link above to send us a message directly from your email client.</p>
-  </main>
+
 
   <!-- FOOTER BELOW -->
   <footer class="site-footer">

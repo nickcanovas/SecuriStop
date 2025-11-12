@@ -1,0 +1,247 @@
+/* Basic reset and variables */
+:root{
+  --bg:#F5F7FA;
+  --ink:#0b1220;
+  --muted:#546E7A;
+  --accent:#4A7C9F;
+  --max-width:1100px;
+  font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+*{box-sizing:border-box}
+html,body{
+  height:100%;
+  margin:0;
+  color:var(--ink);
+  background:var(--bg);
+  -webkit-font-smoothing:antialiased;
+  -webkit-text-size-adjust: 100%;
+  padding: 0;
+}
+.container{max-width:var(--max-width);margin:0 auto;padding:0 1rem}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:1rem 0}
+.brand{font-weight:700;text-decoration:none;color:var(--ink);font-size:1.125rem}
+img { max-width: 100%; height: auto; display: block; }
+body { overflow-x: hidden; }
+
+h1 {
+  position: relative;
+  display: inline-block; /* keeps the underline tight to the text */
+}
+
+h1::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 4px; /* adjust thickness */
+  background-color: #FFC107; /* safety yellow */
+  margin-top: 8px; /* space between text and line */
+  border-radius: 2px; /* optional: makes the line edges softer */
+}
+
+/* **************************** */
+/*        NAV / HEADER          */
+/* **************************** */
+.nav {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.nav{display:flex;gap:1rem;align-items: center}
+.nav a{color:var(--ink);text-decoration:none;padding:0.25rem 0.5rem}
+.nav a:hover{color:var(--accent)}
+.nav-toggle{display:none;background:none;border:0;font-size:1.25rem; cursor:pointer;} /* cursor:pointer; new*/
+
+/* Make sure anchor styles still apply */
+.nav > a,
+.nav .dropbtn {
+  color: var(--ink);
+  text-decoration: none;
+  padding: 0.25rem 0.5rem;
+  display: inline-block;
+}
+
+/* Remove default list styles for dropdown menus */
+.dropdown-content,
+.dropdown-content li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Position the dropdown menu as an overlay */
+.dropdown {
+  position: relative; /* establishes positioning context */
+}
+
+/* Hidden by default, absolutely positioned overlay */
+.dropdown-content {
+  display: none;                /* hidden until hover or open */
+  position: absolute;
+  /*top: calc(100% + 8px); */       /* sits below the About button with a small gap */
+  top: 100%;        /* touches bottom edge of button */
+  margin-top: 0;    /* removes extra space that causes hover loss */
+  left: 0;
+  min-width: 180px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(10, 20, 30, 0.12);
+  z-index: 999;
+  padding: 0.25rem 0;
+}
+
+/* Submenu items */
+.dropdown-content a {
+  display: block;
+  padding: 0.6rem 1rem;
+  color: var(--ink);
+  text-decoration: none;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.dropdown-content a:hover {
+  background: #f5f7fa;
+  color: var(--accent);
+}
+
+/* Show on hover (desktop) */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* caret indicator on About */
+.dropbtn::after {
+  content: "▾";
+  margin-left: 0.35rem;
+  font-size: 0.85rem;
+  transition: transform 0.25s ease;
+}
+
+/* dropdown to stay open even when the mouse hovers over padding edge*/
+.dropdown:hover .dropbtn {
+  background-color: rgba(0,0,0,0.03); /* subtle feedback */
+}
+
+/* rotate caret on hover */
+.dropdown:hover .dropbtn::after {
+  transform: rotate(180deg);
+}
+
+/* Ensure all nav items share the same vertical alignment */
+.nav a,
+.dropbtn {
+  line-height: 1;            /* keeps text baselines consistent */
+  padding: 0.5rem 0.75rem;   /* make all buttons same height */
+  display: flex;
+  /* align-items: center;  */     /* vertically center text */
+}
+
+/* **************************** */
+/*        CONTACT PAGE          */
+/* **************************** */
+
+body.contact-page {
+  font-family: 'Inter', sans-serif;
+  color: #222;
+  margin: 0;
+  background-color: #f8f8f8;
+}
+
+/* Hero Section */
+.contact-hero {
+  position: relative;
+  width: 100%;
+  max-height: 350px;
+  overflow: hidden;
+}
+
+.contact-hero img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  display: block;
+  filter: brightness(70%);
+}
+
+.contact-hero-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-hero-overlay h1 {
+  color: #fff;
+  font-size: 2.5rem;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+  position: relative;
+}
+
+.contact-hero-overlay h1::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: #FFD300; /* safety yellow line */
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+/* Main Content */
+.contact-content {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: #fff;
+  border-radius: 12px;
+  max-width: 800px;
+  margin: 2rem auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.contact-content .intro {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.contact-info p {
+  margin: 1rem 0;
+  font-size: 1.2rem;
+}
+
+.contact-info strong {
+  color: #1b1b1b;
+}
+
+.contact-info a {
+  color: #004aad;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.contact-content .note {
+  margin-top: 2rem;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+/* Mobile adjustments */
+@media (max-width: 640px) {
+  .contact-hero img {
+    height: 250px;
+  }
+
+  .contact-hero-overlay h1 {
+    font-size: 1.8rem;
+  }
+
+  .contact-content {
+    padding: 2rem 1rem;
+  }
+}
