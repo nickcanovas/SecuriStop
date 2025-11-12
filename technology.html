@@ -51,13 +51,13 @@
     <section class="tech-step">
       <div class="step-inner">
         <figure class="step-media">
-          <img src="images/purpose-image.jpg" alt="Camera captures vehicle" />
+          <img src="images/camera_system.png" alt="Camera captures vehicle" />
         </figure>
 
         <div class="step-card">
           <h2>1 — Camera detection & capture</h2>
           <p>
-            High-speed camera sensors mounted at the bus stop continuously monitor the approach lane. When an object enters the detection zone, the system triggers a short, high-resolution burst capture (multiple frames) to ensure at least one frame is free of motion blur. Exposure, shutter timing, and IR illumination are adjusted dynamically for day/night conditions.
+            High-speed camera sensors mounted on the exterior of the bus monitor the surrounding traffic during all bus stops with passengers exiting. When an object enters the detection zone, the system triggers a short, high-resolution burst capture to ensure at clear imaging. Exposure, shutter timing, and IR illumination are adjusted dynamically for day/night conditions.
           </p>
           <p><strong>Hardware:</strong> Global-shutter camera, IR illuminator, low-latency capture buffer.</p>
         </div>
@@ -69,13 +69,13 @@
     <section class="tech-step reverse">
       <div class="step-inner">
         <figure class="step-media">
-          <img src="images/purpose-image.jpg" alt="Image processing and cropping" />
+          <img src="images/camera_detection_full_outline.png" alt="Image processing and cropping" />
         </figure>
 
         <div class="step-card">
           <h2>2 — Preprocessing & plate localization</h2>
           <p>
-            Captured frames are run through a preprocessing pipeline (de-noise, contrast stretch, geometric correction). A lightweight object detection model isolates vehicle and plate regions, producing tight crops for downstream OCR. Multiple candidate crops are kept and scored by quality metrics (sharpness, occlusion, angle).
+            Captured frames are run through a preprocessing pipeline. A lightweight object detection model isolates vehicle and plate regions. Multiple candidate crops are kept and scored by quality metrics.
           </p>
           <p><strong>Software:</strong> Lightweight CNN detector, GPU/edge-accelerated preprocessing.</p>
         </div>
@@ -87,13 +87,13 @@
     <section class="tech-step">
       <div class="step-inner">
         <figure class="step-media">
-          <img src="images/purpose-image.jpg" alt="Optical character recognition" />
+          <img src="images/license_plate_OCR.png" alt="Optical character recognition" />
         </figure>
 
         <div class="step-card">
           <h2>3 — OCR & confidence scoring</h2>
           <p>
-            Crops are sent to an OCR engine optimized for variable fonts and partial occlusion. Multiple hypotheses are generated and ranked by confidence. Post-processing applies regional plate format rules and fuzzy matching to increase accuracy and reduce false positives.
+            Crops are sent to an OCR engine optimized for variable fonts and partial occlusion. Multiple hypotheses are generated and ranked by confidence. Post-processing applies multiple AI-enhanced methods to increase accuracy and eliminate false positives.
           </p>
         </div>
       </div>
@@ -103,17 +103,17 @@
     <section class="tech-step reverse">
       <div class="step-inner">
         <figure class="step-media">
-          <img src="images/purpose-image.jpg" alt="Validation, timestamping, and delivery" />
+          <img src="images/step_4.png" alt="Validation, timestamping, and delivery" />
         </figure>
 
         <div class="step-card">
           <h2>4 — Validation, timestamping & delivery</h2>
           <p>
-            Verified plates are timestamped, geo-tagged, and packaged with evidence frames. Secure delivery to enforcement endpoints occurs over TLS; optionally batched to meet local retention and privacy policies. Audit logs and chain-of-custody metadata are included for legal acceptability.
+            Verified plates are timestamped, geo-tagged, and packaged with evidence frames. Secure delivery of violation packages to enforcement endpoints occurs over TLS; optionally batched to meet local retention and privacy policies. Audit logs and chain-of-custody metadata are included for legal acceptability.
           </p>
         </div>
       </div>
-      <div class="step-number">4.</div>
+      <!--<div class="step-number">4.</div> -->
     </section>
 
   </main>
